@@ -20,13 +20,33 @@
 В клонированном репозитории:
 
 1. Найдите полный хеш и комментарий коммита, хеш которого начинается на `aefea`.
-2. Ответьте на вопросы.
+
+**Ответ**</br>
+  Использовал команду '''git show --pretty="%H: %s" --name-only aefea'''</br>
+  ![Task_1](https://drive.google.com/file/d/1oguj_NaM5R39QH1JBc6G4WqVxICZm59P/view?usp=sharing)
+
+3. Ответьте на вопросы.
 
 * Какому тегу соответствует коммит `85024d3`?
+**Ответ**</br>
+  Использовал команду '''git tag --contains 85024d3 | sort | head -n1'''</br>
+  [Task_2](https://drive.google.com/file/d/1idCV4aokR8shbFBI4oxRZAgpCAvYSoTb/view?usp=sharing)</br>
 * Сколько родителей у коммита `b8d720`? Напишите их хеши.
+**Ответ**</br>
+  Использовал команду '''git show --pretty=format:%P b8d720'''. Родителей два, их хеши:</br>56cd7859e05c36c06b56d013b55a252d0bb7e158 </br>9ea88f22fc6269854151c571162c5bcf958bee2b</br>
+  [Task_3](https://drive.google.com/file/d/1wOAtUS0ltxng_rZtBVBTMmvH8EW7Hjsn/view?usp=sharing)</br>
 * Перечислите хеши и комментарии всех коммитов, которые были сделаны между тегами  v0.12.23 и v0.12.24.
+**Ответ**</br>
+  Использовал команду '''git log v0.12.23..v0.12.24 --pretty=format:"%H: %s"'''</br>
+  [Task_2](https://drive.google.com/file/d/1308ALFA-mIuX9uuCBptjFBuUSXinKNeq/view?usp=sharing)</br>
 * Найдите коммит, в котором была создана функция `func providerSource`, её определение в коде выглядит так: `func providerSource(...)` (вместо троеточия перечислены аргументы).
+**Ответ**</br>
+  Использовал команду '''git log -S'providerSource' --pretty=format:"%H %cd" | tail -n 1'''</br>
+  [Task_2](https://drive.google.com/file/d/1JDCs4svG--R0cHPcZKTLh1a1ws23SDov/view?usp=sharing)</br>
 * Найдите все коммиты, в которых была изменена функция `globalPluginDirs`.
+**Ответ**</br>
+  Использовал команду '''git log -S'globalPluginDirs' --pretty=format:"%H"'''</br>
+  [Task_2](https://drive.google.com/file/d/1JBP-OZM5iEyYaNXMi3z2fjCc670q3AT3/view?usp=sharing)</br>
 * Кто автор функции `synchronizedWriters`? 
 
 *В качестве решения ответьте на вопросы и опишите, как были получены эти ответы.*
