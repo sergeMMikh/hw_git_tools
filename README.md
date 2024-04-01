@@ -31,33 +31,33 @@
 
 **Ответ**</br>
   Использовал команду ```git tag --contains 85024d3 | sort | head -n1``` так же подойдёт просто ```git log -1 85024d3```.</br>
-  [Task_2](images/Task_2.png)
+  ![Task_2](images/Task_2.png)
   
 * Сколько родителей у коммита `b8d720`? Напишите их хеши.
 
 **Ответ**</br>
   Можно найти информацию о родителях в выводе команды ```git log -1 b8d720```, я спользовал команду ```git show --pretty=format:%P b8d720``` для более точно й информации. Родителей два, их хеши:</br>56cd7859e05c36c06b56d013b55a252d0bb7e158 </br>9ea88f22fc6269854151c571162c5bcf958bee2b</br>
-  [Task_3](images/Task_3.png)</br>
+  ![Task_3](images/Task_3.png)</br>
   
 * Перечислите хеши и комментарии всех коммитов, которые были сделаны между тегами  v0.12.23 и v0.12.24.
 
 **Ответ**</br>
   Использовал команду ```git log v0.12.23..v0.12.24 --pretty=format:"%H: %s"```</br>
-  [Task_4](images/Task_4.png)</br>
+  ![Task_4](images/Task_4.png)</br>
 * Найдите коммит, в котором была создана функция `func providerSource`, её определение в коде выглядит так: `func providerSource(...)` (вместо троеточия перечислены аргументы).
 
 **Ответ**</br>
   Использовал команду ```git log -S'providerSource' --pretty=format:"%H %cd" | tail -n 1```</br>
-  [Task_5](images/Task_5.png)</br>
+  ![Task_5](images/Task_5.png)</br>
   Полную же информацию о фунции можно получить командой ```git log -S 'func providerSource'```</br>
-  [Task_5_1](images/Task_5_1.png)</br>
+  ![Task_5_1](images/Task_5_1.png)</br>
 * Найдите все коммиты, в которых была изменена функция `globalPluginDirs`.
 
 **Ответ**</br>
   Наиболее полный ответ будет содержаться в выводе команды ```git log -GglobalPluginDirs --stat```, яже использовал команду ```git log -S'globalPluginDirs' --pretty=format:"%H"``` для вывода списка коммитов без лишней информации.</br>
-  [Task_6](images/Task_6.png)</br>
+  ![Task_6](images/Task_6.png)</br>
 * Кто автор функции `synchronizedWriters`?
 
 **Ответ**</br>
   У этой функции два автора:  James Bardin и Martin Atkins. ```git log -S synchronizedWriters --pretty=format:"%h %an"```</br>
-  [Task_7](images/Task_7.png)</br>
+  ![Task_7](images/Task_7.png)</br>
