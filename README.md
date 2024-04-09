@@ -23,8 +23,8 @@ In the cloned repository:
 
 1. Find the full hash and comment of the commit whose hash starts with aefea..
 
-**Ответ**</br>
-  I used the command ```git show --pretty="%H: %s" --name-only aefea``` instead of ```git show aefea``` to shorten the output.</br>
+**Solution**</br>
+  I used the command ```git show --pretty="%H: %s" --name-only aefea``` instead of ```git show aefea``` to shorten the output.</br></br>
   ![Task_1](images/Task_1.png)
 
 2. Answer the questions.
@@ -32,7 +32,7 @@ In the cloned repository:
 * Which tag corresponds to the commit `85024d3`?
 
 **Solution**</br>
-  I used the command ```git tag --contains 85024d3 | sort | head -n1```, but ```git log -1 85024d3```  will also work.</br>
+  I used the command ```git tag --contains 85024d3 | sort | head -n1```, but ```git log -1 85024d3```  will also work.</br></br>
   ![Task_2](images/Task_2.png)
   
 * How many parents does the commit  `b8d720`? Write their hashes.
@@ -44,22 +44,22 @@ In the cloned repository:
 * List the hashes and comments of all commits made between the tags  v0.12.23 и v0.12.24.
 
 **Solution**</br>
-  I used the command ```git log v0.12.23..v0.12.24 --pretty=format:"%H: %s"```</br>
+  I used the command ```git log v0.12.23..v0.12.24 --pretty=format:"%H: %s"```</br></br>
   ![Task_4](images/Task_4.png)</br>
 * Find the commit in which the function `func providerSource`, was created. Its definition in the code looks like this: `func providerSource(...)` (arguments are listed instead of ellipsis).
 
 **Solution**</br>
   I used the command ```git log -S'providerSource' --pretty=format:"%H %cd" | tail -n 1```</br>
   ![Task_5](images/Task_5.png)</br>
-  I can get the full information about the function using the command ```git log -S 'func providerSource'```</br>
+  I can get the full information about the function using the command ```git log -S 'func providerSource'```</br></br>
   ![Task_5_1](images/Task_5_1.png)</br>
 * Find all commits where the function `globalPluginDirs` was changed.
 
 **Solution**</br>
-  The most comprehensive answer will be found in the output of the command ```git log -GglobalPluginDirs --stat```, but I used the command ```git log -S'globalPluginDirs' --pretty=format:"%H"```  to output a list of commits without extra information.</br>
+  The most comprehensive answer will be found in the output of the command ```git log -GglobalPluginDirs --stat```, but I used the command ```git log -S'globalPluginDirs' --pretty=format:"%H"```  to output a list of commits without extra information.</br></br>
   ![Task_6](images/Task_6.png)</br>
 * Who is the author of the function `synchronizedWriters`?
 
 **Solution**</br>
-  This function has two authors:  James Bardin and Martin Atkins. ```git log -S synchronizedWriters --pretty=format:"%h %an"```</br>
+  This function has two authors:  James Bardin and Martin Atkins. ```git log -S synchronizedWriters --pretty=format:"%h %an"```</br></br>
   ![Task_7](images/Task_7.png)</br>
